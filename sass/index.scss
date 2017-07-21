@@ -14,12 +14,15 @@ ul{/* Custom li*/
   padding-left: 1em;
 }
 
-li{ padding-left: 5px; margin-top: 1em;}
+li{ padding-left: 5px; }
 
 a{/*Custom a*/
   font-size: 15px;
   text-decoration: none;
+  color: $blanco;
 }
+
+.li{ margin-top: 1em; }
 
 .flex-end{
   display: flex;
@@ -135,9 +138,9 @@ figure{
   text-align: center;
 }
 
-.full-w{
-  width: 100%;
-}
+.full-w{ width: 100%; }
+
+.pad0{ padding:0px; }
 
 @import "cards";
 
@@ -173,6 +176,16 @@ figure{
 .footer-title{
   color: $naranja;
   border-bottom: 1px solid $naranja;
+  font-size: 1.5em;
+}
+
+.footer-li{ font-size: 1em; }
+
+.footer-img{ height: 200px;}
+
+.post-footer{
+  background-color: $negro;
+  height: 50px;
 }
 
 @media(max-width:768px){

@@ -32,11 +32,16 @@ mixin Card(x)
           .circulo #{index + 1}
           h3.subtitulo #{val.title}
           p #{val.p}
+          
+mixin Ul(lis)
+  ul.pad0
+    each val,index in lis
+      li
+        a.footer-li(href="#") #{val.li}
       
 include header.pug.jade
 
 body
-
   include nav.pug.jade
   .contenedor
     .columns
@@ -86,53 +91,34 @@ body
   .columns.pads
     +Card(cards)
       
-  .columns.pads.back
-    .column.is-5
-      .box-contact
-        form.form
-          .field
-            label.label Name
-            .control
-              input.input(type="text" placeholder="input field")
-          .field
-            label.label Name
-            .control
-              input.input(type="text" placeholder="input field")
-          .field
-            label.label Name
-            .control
-              input.input(type="text" placeholder="input field")
-          .field
-            label.label Name
-            .control
-              input.input(type="text" placeholder="input field")
-          .field
-            .control
-              a.button.full-w.btn-contact Submit
-    .column.is-7
-      h1.h1-contact Contáctenos
-      p En #[strong iUgetit] puedes encontrar personas que buscan tus servicios de manera rapida y sencilla, solo debes registrarte y comenzar a...
-    
+      
+  include contactenos.pug.jade
   -var p_contact = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae."  
   .columns.pads
     .column.is-5
     .column.is-7
       ul
         each val in [1,2,3]
-          li #[span.icon.azul #[i.fa.fa-dot-circle-o(aria-hidden="true")] ] #{p_contact}
+          li.li #[span.icon.azul #[i.fa.fa-dot-circle-o(aria-hidden="true")] ] #{p_contact}
 
-  footer.footer
+  
+  -var lis1 = [{li:"Facebook"},{li:"Instagram"},{li:"Twitter"},{li:"YouTube"},{li:"LinkedIn"}]
+  -var lis2 = [{li:"Contact Us"},{li:"Sing In"},{li:"Register"},{li:"Other"}]
+  footer.footer.pad0
     .columns.pads
       .column
-        img(src="img/brand-footer.png")
+        img.footer-img(src="img/brand-footer.png")
       .column
         p.footer-title Síguenos
+        +Ul(lis1)
       .column
         p.footer-title About Us
+        +Ul(lis2)
       .column
         p.footer-title About Us
+        +Ul(lis2)
+  .post-footer
   
-  include contactenos.pug.jade  
   include footer.pug.jade
   
 script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
