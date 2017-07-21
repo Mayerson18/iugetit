@@ -18,6 +18,20 @@ mixin Boxs(x)
         img.boxs(src="#{val.img}" alt="#{val.text}")
         img.filter(src="#{val.img2}" alt="")
         figcaption.box-text #{val.text}
+        
+-var p_card = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+-var card1 = {title:"Registrate",p:p_card}
+-var card2 = {title:"Registra tus habilidades",p:p_card}
+-var card3 = {title:"Certifica tu Cuenta",p:p_card}
+-var cards = [card1,card2,card3]
+mixin Card(x)
+  each val,index in x
+    .column
+      .carta
+        .carta-contenido
+          .circulo #{index + 1}
+          h3.subtitulo #{val.title}
+          p #{val.p}
       
 include header.pug.jade
 
@@ -68,10 +82,59 @@ body
         p Mas de 1200 profesionales para ayudarte
     .column
       img(src="img/woman.png")
+  
+  .columns.pads
+    +Card(cards)
+      
+  .columns.pads.back
+    .column.is-5
+      .box-contact
+        form.form
+          .field
+            label.label Name
+            .control
+              input.input(type="text" placeholder="input field")
+          .field
+            label.label Name
+            .control
+              input.input(type="text" placeholder="input field")
+          .field
+            label.label Name
+            .control
+              input.input(type="text" placeholder="input field")
+          .field
+            label.label Name
+            .control
+              input.input(type="text" placeholder="input field")
+          .field
+            .control
+              a.button.full-w.btn-contact Submit
+    .column.is-7
+      h1.h1-contact Contáctenos
+      p En #[strong iUgetit] puedes encontrar personas que buscan tus servicios de manera rapida y sencilla, solo debes registrarte y comenzar a...
     
+  -var p_contact = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae."  
+  .columns.pads
+    .column.is-5
+    .column.is-7
+      ul
+        each val in [1,2,3]
+          li #[span.icon.azul #[i.fa.fa-dot-circle-o(aria-hidden="true")] ] #{p_contact}
+
+  footer.footer
+    .columns.pads
+      .column
+        img(src="img/brand-footer.png")
+      .column
+        p.footer-title Síguenos
+      .column
+        p.footer-title About Us
+      .column
+        p.footer-title About Us
   
   include contactenos.pug.jade  
   include footer.pug.jade
   
 script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 script(src="js/index.js")
+script(src="https://use.fontawesome.com/baac1788c9.js")

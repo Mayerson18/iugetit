@@ -1,0 +1,36 @@
+.carta{
+  position: relative;
+  margin-top: 2em;
+  padding: 1em 2em;
+  width: 100%;
+  background-color: #fff;
+  min-height: 280px;
+  -webkit-box-shadow: 2px 2px 4px 0px #e6d9d9;
+  box-shadow: 2px 2px 4px 0px #e6d9d9;
+}
+
+.carta-contenido{
+  @extend .flex-center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & > h3{
+    font-size: 1.5em;
+    color: $naranja;
+  }
+  & > p{
+    font-size: .8em;
+    text-align: justify;
+  }
+}
+
+.circulo{
+  color: $naranja;
+  border: 1px solid $naranja;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  @extend .flex-center;
+  font-size: 2em;
+}

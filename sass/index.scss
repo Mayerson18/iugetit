@@ -14,12 +14,19 @@ ul{/* Custom li*/
   padding-left: 1em;
 }
 
-li{ padding-left: 5px; }
+li{ padding-left: 5px; margin-top: 1em;}
 
 a{/*Custom a*/
   font-size: 15px;
   text-decoration: none;
 }
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
 
 .nav{
   background-color: #0099c2;
@@ -123,13 +130,54 @@ figure{
   background-color: #0099c2;
 }
 
-.flex-end{
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
 .p-profesionales{
   font-size: 1.3em;
   text-align: center;
+}
+
+.full-w{
+  width: 100%;
+}
+
+@import "cards";
+
+.back{
+  background: -webkit-linear-gradient(top, #fff 0%, #f6f6f6 47%, #ededed 100%);
+}
+.box-contact{
+  width: 94%;
+  position: absolute;
+  border: 4px solid $azul;
+  border-radius: 25px;
+  background-color: $blanco;
+  padding: 2em 1em;
+}
+
+.btn-contact{
+  background-color: $azul;
+  color: $blanco;
+}
+
+.is-5{
+  position: relative;
+}
+
+.h1-contact{ font-size: em(63px);}
+
+.azul{ color: $azul; }
+
+.footer{
+  background-color: #5d5d5d;
+}
+
+.footer-title{
+  color: $naranja;
+  border-bottom: 1px solid $naranja;
+}
+
+@media(max-width:768px){
+  .boton{ font-size: .8em;}
+  .nav-item{ color: black!important;}
+  .box-contact{ position: static;}
+  .h1-contact{ font-size: 2em;}
 }
