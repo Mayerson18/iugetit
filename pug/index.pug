@@ -1,77 +1,14 @@
 //output:../index.html
 -var p1 = "¿Reparaciones y servicios en tu casa o empresa? Se reventó la tubería, los fusibles se quemaron, el carro no prendió, necesitas construir una mesa o pared, instalar internet o simplemente cambiar un bombillo, iUgetit lo hace por ti."
 -var p2 = "Sin tener que salir de casa o del trabajo, iUgetit te ofrece variadas opciones para que elijas la que mejor se ajuste a tu presupuesto y necesidad."
--var objeto1 = {img:"img/new/1.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
--var objeto2 = {img:"img/new/2.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
--var objeto3 = {img:"img/new/3.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
--var objeto4 = {img:"img/new/4.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
--var objeto5 = {img:"img/new/5.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
--var objeto6 = {img:"img/new/1.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
--var objeto7 = {img:"img/new/2.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
--var objeto8 = {img:"img/new/3.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
--var json = [objeto1,objeto2,objeto3,objeto4]
--var json2 = [objeto5,objeto6,objeto7,objeto8]
-mixin Boxs(x)
-  each val,index in x
-    .column
-      figure
-        img.boxs(src="#{val.img}" alt="#{val.text}")
-        img.filter(src="#{val.img2}" alt="")
-        figcaption.box-text #{val.text}
-        
--var p_card = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
--var card1 = {title:"Registrate",p:p_card}
--var card2 = {title:"Registra tus habilidades",p:p_card}
--var card3 = {title:"Certifica tu Cuenta",p:p_card}
--var cards = [card1,card2,card3]
-mixin Card(x)
-  each val,index in x
-    .column
-      .carta
-        .carta-contenido
-          .circulo #{index + 1}
-          h3.subtitulo #{val.title}
-          p #{val.p}
-          
-mixin Ul(lis)
-  ul.pad0
-    each val,index in lis
-      li
-        a.footer-li(href="#") #{val.li}
-      
+    
 include header.pug.jade
 
 body
   include nav.pug.jade
-  .contenedor
-    .columns
-      .column
-        .header
-          h1.h1 Lo que necesites, #[strong iUgetit] lo hace por ti.
-          p.p #{p1}
-          p.p #{p2}
-        .columns
-          .column
-            img(src="img/play_prism_hlock_2x.png")
-          .column
-            img(src="img/disponible-en-el-app-store.png")
-      .column
-        img(src="img/bitmap.png")
-      
-  br
-  .columns.pads
-    .column.is-3
-      h4.h1 ¿Qué Necesitas?
-    .column.is-9
-      input.search.input(type="text" name="search" placeholder="cambiar un bombillo, carpintero, plomero. . .")
-      a.button.boton-search Buscar
-        i.glyphicon.glyphicon-search
+  include banner.pug.jade
+  include box.pug.jade
   
-  .columns.pads
-    +Boxs(json)
-  .columns.pads
-    +Boxs(json2)
-    
   br
   .pads
     h4.h1 Ofrece tus servicios facil y seguro Encuentra profesionales cerca de ti
@@ -88,37 +25,8 @@ body
     .column
       img(src="img/woman.png")
   
-  .columns.pads
-    +Card(cards)
-      
-      
+  include card.pug.jade
   include contactenos.pug.jade
-  -var p_contact = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae."  
-  .columns.pads
-    .column.is-5
-    .column.is-7
-      ul
-        each val in [1,2,3]
-          li.li #[span.icon.azul #[i.fa.fa-dot-circle-o(aria-hidden="true")] ] #{p_contact}
-
-  
-  -var lis1 = [{li:"Facebook"},{li:"Instagram"},{li:"Twitter"},{li:"YouTube"},{li:"LinkedIn"}]
-  -var lis2 = [{li:"Contact Us"},{li:"Sing In"},{li:"Register"},{li:"Other"}]
-  footer.footer.pad0
-    .columns.pads
-      .column
-        img.footer-img(src="img/brand-footer.png")
-      .column
-        p.footer-title Síguenos
-        +Ul(lis1)
-      .column
-        p.footer-title About Us
-        +Ul(lis2)
-      .column
-        p.footer-title About Us
-        +Ul(lis2)
-  .post-footer
-  
   include footer.pug.jade
   
 script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")

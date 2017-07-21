@@ -1,112 +1,73 @@
 //output:../index2.html
--var p1 = "Front Desk, con sus más de 160 opciones entre operativas,configuración y reportes, es a nivel de hoteles el más importanteentre los módulos.  Una vez configurado el Front Parámetros, estemódulo nos permite de una forma muy eficiente controlar lasoperaciones diarias con reportes muy útiles y facilidad demanipulación de grandes cantidades de información. Front Desk contiene el modulo de Front Parámetro."
--var lis = ["FRONT DESK","DECISIONES SUPPORT SYSTEM","COMUNICATION","ACCOUNTING","TOUR OPERATION","POINT OF SALES BILLING","PAYROLL","MULTIPROPERTY","FIXED ASSET","MANAGEMENT","MAIL SERVICE","ONLINE RESERVATION"]
--var casos = ["Hoteles","Restaurantes","Tour Operadores","Comercios","Empresas","Instituciones Educativas"]
--var hotel1 = {img:"img/casos/hoteles/agualcas.jpg",url:"agualcas.com",img2:"img/flag-cr.png"}
--var hotel2 = {img:"img/casos/hoteles/cano-negro.png",url:"agualcas.com",img2:"img/flag-cr.png"}
--var hotel3 = {img:"img/casos/hoteles/casa-roland-marina-golfito.png",url:"agualcas.com",img2:"img/flag-cr.png"}
--var hotel4 = {img:"img/casos/hoteles/elgranescape.png",url:"El gran escape",img2:"img/flag-cr.png"}
--var hotel5 = {img:"img/casos/hoteles/finca-luna-nueva-lodge.png",url:"agualcas.com",img2:"img/flag-cr.png"}
--var hotel6 = {img:"img/casos/hoteles/las-colinas.png",url:"las-colinas",img2:"img/flag-cr.png"}
--var hoteles1 = [hotel1,hotel2,hotel3]
--var hoteles2 = [hotel4,hotel5,hotel6]
--var item = {item1: hoteles1,item2: hoteles2}
--var itemss = [item,item]
-
-mixin items(item,index)
-  .item(data-hash="#{'i'+index}")
-    .columns
-      +casos(item.item1)
-    .columns
-      +casos(item.item2)
-
-mixin casos(vak)
-  each val,index in vak
-    .column.casos-item
-      .flex-center
-        img.img-item(src="#{val.img}")
-      .flex-center
-        p #{val.url}
-      .flex-center
-        img.img-cr(src="#{val.img2}")
-          
-mixin lis(id,text)
-  if id==0
-    li.li.current
-      a.a(data-id="#{id}", href="#{'#'+ id}") #{text}
-  else
-    li.li
-      a.a(data-id="#{id}", href="#{'#'+ id}") #{text}
+-var p1 = "¿Reparaciones y servicios en tu casa o empresa? Se reventó la tubería, los fusibles se quemaron, el carro no prendió, necesitas construir una mesa o pared, instalar internet o simplemente cambiar un bombillo, iUgetit lo hace por ti."
+-var p2 = "Sin tener que salir de casa o del trabajo, iUgetit te ofrece variadas opciones para que elijas la que mejor se ajuste a tu presupuesto y necesidad."
+    
 include header.pug.jade
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
-    link(rel="stylesheet" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css")
-body
-  .nav.aparecer
-    
-    .nav-toggle
-      span
-      span
-      span
-    
-    div.nav-item.nav-pro PRODUCTOS    
-    
-    .nav-right.nav-menu
-      a.nav-item(href="#0")="FRONT DESK"
-      a.nav-item(href="#1")="DECISIONES SUPPORT SYSTEM"
-      a.nav-item(href="#2")="COMUNICATION"
-      a.nav-item(href="#3")="ACCOUNTING"
-      a.nav-item(href="#4")="TOUR OPERATION"
-      a.nav-item(href="#5")="POINT OF SALES BILLING"
-      a.nav-item(href="#6")="PAYROLL"
-      a.nav-item(href="#7")="MULTIPROPERTY"
-      a.nav-item(href="#8")="FIXED ASSET"
-      a.nav-item(href="#9")="MANAGEMENT"
-      a.nav-item(href="#10")="MAIL SERVICE"
-      a.nav-item(href="#11")="ONLINE RESERVATION"
-        
-  .barra.desaparecer
-  .items-fondo
-    img.img-fondo(src="img/fondo.png")
-    .texto-fondo My Seven Suite es un Software superior, Realice una mejor gestion de su Hotel o Resort
-    .boton-fondo SOLICITA MAS INFORMACIÓN
-    
-  .fondo
-  br
-  br
-  .columns.plr-3em
-    .is-3.column
-      h2.productos.desaparecer Nuestros Productos
-      nav.desaparecer
-        ul
-          each val, index in lis
-            +lis(index,val)
-    .column.is-9
-      .owl-carousel#data-json2.carrusel
-        //include productos.pug.jade
 
-  img.desaparecer(src="img/modulos.png" width="100%")
-  .center
-    .mas Mas de #[strong 100] Clientes Felices
-    
-  ul.casos-container
-    each val,index in casos
-      if index == 0
-        li.casos.active
-          a.active(href="#{'#i'+index}") #{val}
-      else
-        li.casos
-          a.active(href="#{'#i'+index}") #{val}
-          
+body
+  include nav.pug.jade
+  include banner.pug.jade
+  include box.pug.jade
+  .pads
+    h1.h1 Encuentra profesionales cerca de ti Ofrece tus servicios facil y seguro
+    section.ubicanos
+      .columns
+        .column.is-5
+          form.form
+            .field
+              label.label Name
+              .control
+                input.input(required type="text" placeholder="input field")
+            .field
+              label.label Name
+              .control
+                input.input(required type="text" placeholder="input field")
+            .centrado
+              h1.h1-find 28
+              h3.h3-find Pintores
+              p.p-find Estan cerca de tu ubicación
+            a.button.full-w.btn-contact Submit
+        .column.is-7
+          .embed-responsive-16by9.embed-responsive
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.190621514171!2d-74.05439923572655!3d4.736919742662573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8572bdca4a69%3A0x446edf6c42281450!2sMazuren%2C+Bogot%C3%A1%2C+Colombia!5e0!3m2!1ses-419!2ses!4v1492472808906" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+      
+  -var p_pasos1 = "Lo primero que debes hacer es decirnos Qué necesitas , puede ser desde cambiar la chapa de una puerta, el caucho al automóvil, hasta construir una pared, ¿y por qué no? remodelar su baño, o directamente puedes colocar “necesito un albañil o un plomero”. Luego en información adicional puedes ser más específico acerca de lo que necesitas. Coloca medidas, fotos, y más."
+  -var p_pasos2 = "Hay 2 maneras de realizar la búsqueda: Búsqueda normal o Búsqueda iugetit (recomendada). ¿por qué recomendamos la segunda?, búsqueda iugetit es una búsqueda inteligente, con ella NO TENDRÁS que verificar perfil por perfil para saber cual es el que se adapta a su solicitud, o cual se encuentra más cerca de usted. En cambio con la primera, si tendrá que hacerlo."
+  -var p_pasos3 = "¡Bien! Ahora que sabemos lo que necesita, a continuación le ofreceremos varias opciones de profesionales que se ajusten a su requerimiento. Usted y solo usted , es el que decide qué persona es la adecuada para el trabajo."
+  -var p_pasos4 = "Luego de haber chequeado las opciones, usted podrá acceder al perfil de, ejemplo: José Pérez, plomero. Marcos Vega, plomero, y contactarlos directamente, y obtener de ellos presupuesto y disponibilidad. y por Ultimo Contrata quien mejor se Ajuste a tu presupuesto."
   br
   br
-  .owl-carousel#imgs
-    //each val,index in itemss
-      +items(val,index)
-              
+  br
+  section.pasos
+    .columns.pads
+      .column.is-8
+        h1 ¿Cómo funciona iUgetit?
+        .container-pasos
+          .circulo 1
+          p.p-pasos #{p_pasos1}
+        .container-pasos
+          .circulo 2
+          p.p-pasos #{p_pasos2}
+        .container-pasos
+          .circulo 3
+          p.p-pasos #{p_pasos3}
+        .container-pasos
+          .circulo 4
+          p.p-pasos #{p_pasos4}
+        a.button.boton.info
+          strong REGISTRATE
+          p Mas de 1200 profesionales para ayudarte
+      .column.is-4
+        img(src="img/group-4.png")
+        img(src="img/group.png")
+        img(src="img/group-2.png")
+        img(src="img/group-3.png")
+  br
+  br
+  br
   include contactenos.pug.jade
   include footer.pug.jade
   
 script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
-script(src="js/data2.js")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
 script(src="js/index.js")
+script(src="https://use.fontawesome.com/baac1788c9.js")

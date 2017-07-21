@@ -24,3 +24,11 @@
   .column.is-7
     h1.h1-contact Contáctenos
     p En #[strong iUgetit] puedes encontrar personas que buscan tus servicios de manera rapida y sencilla, solo debes registrarte y comenzar a...
+
+-var p_contact = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae."  
+.columns.pads
+  .column.is-5
+  .column.is-7
+    ul
+      each val in [1,2,3]
+        li.li #[span.icon.azul #[i.fa.fa-dot-circle-o(aria-hidden="true")] ] #{p_contact}

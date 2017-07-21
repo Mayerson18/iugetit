@@ -1,0 +1,21 @@
+mixin Ul(lis)
+  ul.pad0
+    each val,index in lis
+      li
+        a.footer-li(href="#") #{val.li}
+-var lis1 = [{li:"Facebook"},{li:"Instagram"},{li:"Twitter"},{li:"YouTube"},{li:"LinkedIn"}]
+-var lis2 = [{li:"Contact Us"},{li:"Sing In"},{li:"Register"},{li:"Other"}]
+footer.footer.pad0
+  .columns.pads
+    .column
+      img.footer-img(src="img/brand-footer.png")
+    .column
+      p.footer-title Síguenos
+      +Ul(lis1)
+    .column
+      p.footer-title About Us
+      +Ul(lis2)
+    .column
+      p.footer-title About Us
+      +Ul(lis2)
+.post-footer

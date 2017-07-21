@@ -1,0 +1,32 @@
+-var objeto1 = {img:"img/new/1.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
+-var objeto2 = {img:"img/new/2.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
+-var objeto3 = {img:"img/new/3.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
+-var objeto4 = {img:"img/new/4.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
+-var objeto5 = {img:"img/new/5.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
+-var objeto6 = {img:"img/new/1.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
+-var objeto7 = {img:"img/new/2.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
+-var objeto8 = {img:"img/new/3.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
+-var json = [objeto1,objeto2,objeto3,objeto4]
+-var json2 = [objeto5,objeto6,objeto7,objeto8]
+
+.columns.pads
+  .column.is-3
+    h4.h1 ¿Qué Necesitas?
+  .column.is-9
+    input.search.input(type="text" name="search" placeholder="cambiar un bombillo, carpintero, plomero. . .")
+    a.button.boton-search Buscar
+      i.glyphicon.glyphicon-search
+        
+mixin Boxs(x)
+  each val,index in x
+    .column
+      .prueba
+        figure
+          img.boxs(src="#{val.img}" alt="#{val.text}")
+          img.filter(src="#{val.img2}" alt="")
+          figcaption.box-text #{val.text}
+          
+.columns.pads
+  +Boxs(json)
+.columns.pads
+  +Boxs(json2)

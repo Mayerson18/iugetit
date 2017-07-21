@@ -1,105 +1,250 @@
 <!DOCTYPE html>
-<html lang="en_US">
+<html lang="es_CO">
   <head>
-    <title>Sevent Front Desk</title>
+    <title>iUgetit.com | Lo que necesites, iUgetit lo hace por ti.</title>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ek+Mukta">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="sass/index.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="favicon.ico" rel="apple-touch-icon-precomposed">
   </head>
 </html>
 <body>
-  <div class="nav aparecer">
-    <div class="nav-toggle"><span></span><span></span><span></span></div>
-    <div class="nav-item nav-pro">PRODUCTOS    </div>
-    <div class="nav-right nav-menu"><a href="#0" class="nav-item">FRONT DESK</a><a href="#1" class="nav-item">DECISIONES SUPPORT SYSTEM</a><a href="#2" class="nav-item">COMUNICATION</a><a href="#3" class="nav-item">ACCOUNTING</a><a href="#4" class="nav-item">TOUR OPERATION</a><a href="#5" class="nav-item">POINT OF SALES BILLING</a><a href="#6" class="nav-item">PAYROLL</a><a href="#7" class="nav-item">MULTIPROPERTY</a><a href="#8" class="nav-item">FIXED ASSET</a><a href="#9" class="nav-item">MANAGEMENT</a><a href="#10" class="nav-item">MAIL SERVICE</a><a href="#11" class="nav-item">ONLINE RESERVATION</a></div>
-  </div>
-  <div class="barra desaparecer"></div>
-  <div class="items-fondo"><img src="img/fondo.png" class="img-fondo">
-    <div class="texto-fondo">My Seven Suite es un Software superior, Realice una mejor gestion de su Hotel o Resort</div>
-    <div class="boton-fondo">SOLICITA MAS INFORMACIÓN</div>
-  </div>
-  <div class="fondo"></div><br><br>
-  <div class="columns plr-3em">
-    <div class="is-3 column">
-      <h2 class="productos desaparecer">Nuestros Productos</h2>
-      <nav class="desaparecer">
-        <ul>
-          <li class="li current"><a data-id="0" href="#0" class="a">FRONT DESK</a></li>
-          <li class="li"><a data-id="1" href="#1" class="a">DECISIONES SUPPORT SYSTEM</a></li>
-          <li class="li"><a data-id="2" href="#2" class="a">COMUNICATION</a></li>
-          <li class="li"><a data-id="3" href="#3" class="a">ACCOUNTING</a></li>
-          <li class="li"><a data-id="4" href="#4" class="a">TOUR OPERATION</a></li>
-          <li class="li"><a data-id="5" href="#5" class="a">POINT OF SALES BILLING</a></li>
-          <li class="li"><a data-id="6" href="#6" class="a">PAYROLL</a></li>
-          <li class="li"><a data-id="7" href="#7" class="a">MULTIPROPERTY</a></li>
-          <li class="li"><a data-id="8" href="#8" class="a">FIXED ASSET</a></li>
-          <li class="li"><a data-id="9" href="#9" class="a">MANAGEMENT</a></li>
-          <li class="li"><a data-id="10" href="#10" class="a">MAIL SERVICE</a></li>
-          <li class="li"><a data-id="11" href="#11" class="a">ONLINE RESERVATION</a></li>
-        </ul>
-      </nav>
+  <nav class="nav">
+    <div class="nav-left"><a class="nav-item"><img src="img/brand.png" alt="Atis" class="logo"></a></div><span class="nav-toggle"><span></span><span></span><span></span></span>
+    <div class="nav-right nav-menu"><a class="nav-item">Contáctenos</a><a class="nav-item">Sig In</a><a class="nav-item active">
+        <div class="nav-btn">Log In</div></a>
+    </div>
+  </nav>
+  <div class="contenedor">
+    <div class="columns">
+      <div class="column">
+        <div class="header">
+          <h1 class="h1">Lo que necesites, <strong>iUgetit</strong> lo hace por ti.</h1>
+          <p class="p">¿Reparaciones y servicios en tu casa o empresa? Se reventó la tubería, los fusibles se quemaron, el carro no prendió, necesitas construir una mesa o pared, instalar internet o simplemente cambiar un bombillo, iUgetit lo hace por ti.</p>
+          <p class="p">Sin tener que salir de casa o del trabajo, iUgetit te ofrece variadas opciones para que elijas la que mejor se ajuste a tu presupuesto y necesidad.</p>
+        </div>
+        <div class="columns">
+          <div class="column"><img src="img/play_prism_hlock_2x.png"></div>
+          <div class="column"><img src="img/disponible-en-el-app-store.png"></div>
+        </div>
+      </div>
+      <div class="column"><img src="img/bitmap.png"></div>
+    </div>
+  </div><br>
+  <div class="columns pads">
+    <div class="column is-3">
+      <h4 class="h1">¿Qué Necesitas?</h4>
     </div>
     <div class="column is-9">
-      <div id="data-json2" class="owl-carousel carrusel">
-        <!--include productos.pug.jade-->
+      <input type="text" name="search" placeholder="cambiar un bombillo, carpintero, plomero. . ." class="search input"><a class="button boton-search">Buscar<i class="glyphicon glyphicon-search"></i></a>
+    </div>
+  </div>
+  <div class="columns pads">
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/1.png" alt="Electricistas" class="boxs"><img src="img/rectangulo-azul.png" alt="" class="filter">
+            <figcaption class="box-text">Electricistas</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
-  </div><img src="img/modulos.png" width="100%" class="desaparecer">
-  <div class="center">
-    <div class="mas">Mas de <strong>100</strong> Clientes Felices</div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/2.png" alt="Plomero" class="boxs"><img src="img/rectangulo-morado.png" alt="" class="filter">
+            <figcaption class="box-text">Plomero</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/3.png" alt="Limpieza" class="boxs"><img src="img/rectangulo-azul.png" alt="" class="filter">
+            <figcaption class="box-text">Limpieza</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/4.png" alt="Pintor" class="boxs"><img src="img/rectangulo-morado.png" alt="" class="filter">
+            <figcaption class="box-text">Pintor</figcaption>
+          </figure>
+        </div>
+      </div>
   </div>
-  <ul class="casos-container">
-    <li class="casos active"><a href="#i0" class="active">Hoteles</a></li>
-    <li class="casos"><a href="#i1" class="active">Restaurantes</a></li>
-    <li class="casos"><a href="#i2" class="active">Tour Operadores</a></li>
-    <li class="casos"><a href="#i3" class="active">Comercios</a></li>
-    <li class="casos"><a href="#i4" class="active">Empresas</a></li>
-    <li class="casos"><a href="#i5" class="active">Instituciones Educativas</a></li>
-  </ul><br><br>
-  <div id="imgs" class="owl-carousel">
-    <!--each val,index in itemss
-    +items(val,index)
-            
-    -->
+  <div class="columns pads">
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/5.png" alt="Electricistas" class="boxs"><img src="img/rectangulo-azul.png" alt="" class="filter">
+            <figcaption class="box-text">Electricistas</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/1.png" alt="Plomero" class="boxs"><img src="img/rectangulo-morado.png" alt="" class="filter">
+            <figcaption class="box-text">Plomero</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/2.png" alt="Limpieza" class="boxs"><img src="img/rectangulo-azul.png" alt="" class="filter">
+            <figcaption class="box-text">Limpieza</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="column">
+        <div class="prueba">
+          <figure><img src="img/new/3.png" alt="Pintor" class="boxs"><img src="img/rectangulo-morado.png" alt="" class="filter">
+            <figcaption class="box-text">Pintor</figcaption>
+          </figure>
+        </div>
+      </div>
   </div>
-  <div class="pre-contact columns plr-3em">
-    <div class="column">
-      <h2>No dudes en Contactarnos</h2>
-      <p>Front Desk, con sus más de 160 opciones entre operativas,configuración y reportes, es a nivel de hoteles el más importanteentre los módulos.  Una vez configurado el Front Parámetros, estemódulo nos permite de una forma muy eficiente controlar lasoperaciones diarias con reportes muy útiles y facilidad demanipulación de grandes cantidades de información. Front Desk contiene el modulo de Front Parámetro.</p>
+  <div class="pads">
+    <h1 class="h1">Encuentra profesionales cerca de ti Ofrece tus servicios facil y seguro</h1>
+    <section class="ubicanos">
+      <div class="columns">
+        <div class="column is-5">
+          <form class="form">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input required type="text" placeholder="input field" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input required type="text" placeholder="input field" class="input">
+              </div>
+            </div>
+            <div class="centrado">
+              <h1 class="h1-find">28</h1>
+              <h3 class="h3-find">Pintores</h3>
+              <p class="p-find">Estan cerca de tu ubicación</p>
+            </div><a class="button full-w btn-contact">Submit</a>
+          </form>
+        </div>
+        <div class="column is-7">
+          <div class="embed-responsive-16by9 embed-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.190621514171!2d-74.05439923572655!3d4.736919742662573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8572bdca4a69%3A0x446edf6c42281450!2sMazuren%2C+Bogot%C3%A1%2C+Colombia!5e0!3m2!1ses-419!2ses!4v1492472808906" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><br><br><br>
+  <section class="pasos">
+    <div class="columns pads">
+      <div class="column is-8">
+        <h1>¿Cómo funciona iUgetit?</h1>
+        <div class="container-pasos">
+          <div class="circulo">1</div>
+          <p class="p-pasos">Lo primero que debes hacer es decirnos Qué necesitas , puede ser desde cambiar la chapa de una puerta, el caucho al automóvil, hasta construir una pared, ¿y por qué no? remodelar su baño, o directamente puedes colocar “necesito un albañil o un plomero”. Luego en información adicional puedes ser más específico acerca de lo que necesitas. Coloca medidas, fotos, y más.</p>
+        </div>
+        <div class="container-pasos">
+          <div class="circulo">2</div>
+          <p class="p-pasos">Hay 2 maneras de realizar la búsqueda: Búsqueda normal o Búsqueda iugetit (recomendada). ¿por qué recomendamos la segunda?, búsqueda iugetit es una búsqueda inteligente, con ella NO TENDRÁS que verificar perfil por perfil para saber cual es el que se adapta a su solicitud, o cual se encuentra más cerca de usted. En cambio con la primera, si tendrá que hacerlo.</p>
+        </div>
+        <div class="container-pasos">
+          <div class="circulo">3</div>
+          <p class="p-pasos">¡Bien! Ahora que sabemos lo que necesita, a continuación le ofreceremos varias opciones de profesionales que se ajusten a su requerimiento. Usted y solo usted , es el que decide qué persona es la adecuada para el trabajo.</p>
+        </div>
+        <div class="container-pasos">
+          <div class="circulo">4</div>
+          <p class="p-pasos">Luego de haber chequeado las opciones, usted podrá acceder al perfil de, ejemplo: José Pérez, plomero. Marcos Vega, plomero, y contactarlos directamente, y obtener de ellos presupuesto y disponibilidad. y por Ultimo Contrata quien mejor se Ajuste a tu presupuesto.</p>
+        </div><a class="button boton info"><strong>REGISTRATE</strong>
+          <p>Mas de 1200 profesionales para ayudarte</p></a>
+      </div>
+      <div class="column is-4"><img src="img/group-4.png"><img src="img/group.png"><img src="img/group-2.png"><img src="img/group-3.png"></div>
     </div>
-    <div class="column">
+  </section><br><br><br>
+  <div class="columns pads back">
+    <div class="column is-5">
       <div class="box-contact">
-        <form action="" method="post" class="form">
-          <input type="text" name="email" placeholder="email">
-          <input type="text" name="nombre" placeholder="nombre">
-          <textarea name="informacion">información</textarea>
-          <button type="submit" name="button" class="boton">CONTACTENOS</button>
+        <form class="form">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input required type="text" placeholder="input field" class="input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" placeholder="input field" class="input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" placeholder="input field" class="input">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" placeholder="input field" class="input">
+            </div>
+          </div>
+          <div class="field">
+            <div class="control"><a class="button full-w btn-contact">Submit</a></div>
+          </div>
         </form>
       </div>
     </div>
+    <div class="column is-7">
+      <h1 class="h1-contact">Contáctenos</h1>
+      <p>En <strong>iUgetit</strong> puedes encontrar personas que buscan tus servicios de manera rapida y sencilla, solo debes registrarte y comenzar a...</p>
+    </div>
   </div>
-  <div class="columns plr-3em">
-    <div class="column">
-      <div class="post-contact"><img src="img/logo-seven.png" class="img-post-contact">
-        <div class="post-contact-title">
-          <p><strong>Dirección:</strong> 50 norte de la Iglesia Católica de Tibás, contiguo al Banco Popular.</p>
-          <p><strong>Telefono:</strong> (506) 2240-6585.</p>
-          <p><strong>Email:</strong> info@mysevensuite.com</p>
-        </div>
+  <div class="columns pads">
+    <div class="column is-5"></div>
+    <div class="column is-7">
+      <ul>
+        <li class="li"><span class="icon azul"><i aria-hidden="true" class="fa fa-dot-circle-o"></i> </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae.</li>
+        <li class="li"><span class="icon azul"><i aria-hidden="true" class="fa fa-dot-circle-o"></i> </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae.</li>
+        <li class="li"><span class="icon azul"><i aria-hidden="true" class="fa fa-dot-circle-o"></i> </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquam soluta sint quaerat ducimus nulla nihil natus cum impedit illum iure vero, blanditiis debitis earum laudantium nostrum aliquid fugit repudiandae.</li>
+      </ul>
+    </div>
+  </div>
+  <footer class="footer pad0">
+    <div class="columns pads">
+      <div class="column"><img src="img/brand-footer.png" class="footer-img"></div>
+      <div class="column">
+        <p class="footer-title">Síguenos</p>
+          <ul class="pad0">
+            <li><a href="#" class="footer-li">Facebook</a></li>
+            <li><a href="#" class="footer-li">Instagram</a></li>
+            <li><a href="#" class="footer-li">Twitter</a></li>
+            <li><a href="#" class="footer-li">YouTube</a></li>
+            <li><a href="#" class="footer-li">LinkedIn</a></li>
+          </ul>
+      </div>
+      <div class="column">
+        <p class="footer-title">About Us</p>
+          <ul class="pad0">
+            <li><a href="#" class="footer-li">Contact Us</a></li>
+            <li><a href="#" class="footer-li">Sing In</a></li>
+            <li><a href="#" class="footer-li">Register</a></li>
+            <li><a href="#" class="footer-li">Other</a></li>
+          </ul>
+      </div>
+      <div class="column">
+        <p class="footer-title">About Us</p>
+          <ul class="pad0">
+            <li><a href="#" class="footer-li">Contact Us</a></li>
+            <li><a href="#" class="footer-li">Sing In</a></li>
+            <li><a href="#" class="footer-li">Register</a></li>
+            <li><a href="#" class="footer-li">Other</a></li>
+          </ul>
       </div>
     </div>
-    <div class="column"></div>
-  </div>
-  <div class="footer">
-    <div class="in-footer"><img src="img/logo-blanco.png"> mysevensuite.com</div>
-  </div>
+  </footer>
+  <div class="post-footer"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="js/data2.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 <script src="js/index.js"></script>
+<script src="https://use.fontawesome.com/baac1788c9.js"></script>
