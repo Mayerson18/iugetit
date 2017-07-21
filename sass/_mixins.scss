@@ -1,0 +1,10 @@
+@function em($px){//CONVIERTE PX A EM
+  @return ($px / 16px) * 1em;
+}
+
+@mixin  textos($font,$weight,$color,$line){
+  font-size: $font;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line;
+}

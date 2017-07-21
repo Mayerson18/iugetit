@@ -1,0 +1,135 @@
+@import "var";
+@import "mixins";
+@import "media";
+@import "v1";
+@import "v2";
+
+body {
+  font: 100% $font-stack;
+}
+
+ul{/* Custom li*/
+  list-style: none!important;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+li{ padding-left: 5px; }
+
+a{/*Custom a*/
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.nav{
+  background-color: #0099c2;
+  height: 100px;
+}
+
+.logo{
+  width: 220px;
+  min-height: 37px;
+}
+
+.nav-item{
+  color: $blanco!important;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn{
+  @extend .flex-center;
+  background-color: $amarillo;
+  border-radius: 20px;
+  width: 70px;
+  height: 36px;
+}
+
+.pads{
+  padding: 0px 10%;
+}
+
+.h1{
+  line-height: 1.5;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: em(36px);
+}
+
+.header{
+  color: #5d5d5d;
+  & > p{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 2em;
+  }
+}
+
+.contenedor{
+  padding: 3em 10%;
+}
+.search{
+  width: 80%;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: em(27px);
+}
+
+.boton-search{
+  background-color: #0099c2;
+  color: $blanco;
+  width: 20%;
+  font-size: 1.9em;
+}
+
+.filter{
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+  top: 0px;
+  height: 205px;
+}
+
+figure{
+  position: relative;
+  width: 262px;
+  @extend .flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $blanco;
+  font-size: 1.4em;
+  height: 205px;
+}
+
+.box-text{
+  position: relative;
+  z-index: 1;
+}
+
+.boton{
+  @extend .flex-center;
+  flex-direction: column;
+  padding: 2em;
+  color: $blanco;
+  font-size: 1.4em;
+}
+
+.info{
+  background-color: #0099c2;
+}
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.p-profesionales{
+  font-size: 1.3em;
+  text-align: center;
+}

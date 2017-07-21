@@ -1,0 +1,77 @@
+//output:../index.html
+-var p1 = "¿Reparaciones y servicios en tu casa o empresa? Se reventó la tubería, los fusibles se quemaron, el carro no prendió, necesitas construir una mesa o pared, instalar internet o simplemente cambiar un bombillo, iUgetit lo hace por ti."
+-var p2 = "Sin tener que salir de casa o del trabajo, iUgetit te ofrece variadas opciones para que elijas la que mejor se ajuste a tu presupuesto y necesidad."
+-var objeto1 = {img:"img/new/1.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
+-var objeto2 = {img:"img/new/2.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
+-var objeto3 = {img:"img/new/3.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
+-var objeto4 = {img:"img/new/4.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
+-var objeto5 = {img:"img/new/5.png",img2:"img/rectangulo-azul.png",text:"Electricistas"}
+-var objeto6 = {img:"img/new/1.png",img2:"img/rectangulo-morado.png",text:"Plomero"}
+-var objeto7 = {img:"img/new/2.png",img2:"img/rectangulo-azul.png",text:"Limpieza"}
+-var objeto8 = {img:"img/new/3.png",img2:"img/rectangulo-morado.png",text:"Pintor"}
+-var json = [objeto1,objeto2,objeto3,objeto4]
+-var json2 = [objeto5,objeto6,objeto7,objeto8]
+mixin Boxs(x)
+  each val,index in x
+    .column
+      figure
+        img.boxs(src="#{val.img}" alt="#{val.text}")
+        img.filter(src="#{val.img2}" alt="")
+        figcaption.box-text #{val.text}
+      
+include header.pug.jade
+
+body
+
+  include nav.pug.jade
+  .contenedor
+    .columns
+      .column
+        .header
+          h1.h1 Lo que necesites, #[strong iUgetit] lo hace por ti.
+          p.p #{p1}
+          p.p #{p2}
+        .columns
+          .column
+            img(src="img/play_prism_hlock_2x.png")
+          .column
+            img(src="img/disponible-en-el-app-store.png")
+      .column
+        img(src="img/bitmap.png")
+      
+  br
+  .columns.pads
+    .column.is-3
+      h4.h1 ¿Qué Necesitas?
+    .column.is-9
+      input.search.input(type="text" name="search" placeholder="cambiar un bombillo, carpintero, plomero. . .")
+      a.button.boton-search Buscar
+        i.glyphicon.glyphicon-search
+  
+  .columns.pads
+    +Boxs(json)
+  .columns.pads
+    +Boxs(json2)
+    
+  br
+  .pads
+    h4.h1 Ofrece tus servicios facil y seguro Encuentra profesionales cerca de ti
+  br
+  .columns.pads
+    .column
+      img(src="img/men.png")
+    .column.center.flex-end
+      p.p-profesionales En #[strong iUgetit] puedes encontrar personas que buscan tus servicios de manera rapida y sencilla, solo debes registrarte y comenza a cotizar, por tus servicios. Es facil y sencillo y muy ajustable a tus necesidades.
+      br
+      a.button.boton.info
+        strong REGISTRATE
+        p Mas de 1200 profesionales para ayudarte
+    .column
+      img(src="img/woman.png")
+    
+  
+  include contactenos.pug.jade  
+  include footer.pug.jade
+  
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="js/index.js")

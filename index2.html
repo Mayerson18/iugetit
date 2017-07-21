@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <title>Sevent Front Desk</title>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ek+Mukta">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="sass/index.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
+  </head>
+</html>
+<body>
+  <div class="nav aparecer">
+    <div class="nav-toggle"><span></span><span></span><span></span></div>
+    <div class="nav-item nav-pro">PRODUCTOS    </div>
+    <div class="nav-right nav-menu"><a href="#0" class="nav-item">FRONT DESK</a><a href="#1" class="nav-item">DECISIONES SUPPORT SYSTEM</a><a href="#2" class="nav-item">COMUNICATION</a><a href="#3" class="nav-item">ACCOUNTING</a><a href="#4" class="nav-item">TOUR OPERATION</a><a href="#5" class="nav-item">POINT OF SALES BILLING</a><a href="#6" class="nav-item">PAYROLL</a><a href="#7" class="nav-item">MULTIPROPERTY</a><a href="#8" class="nav-item">FIXED ASSET</a><a href="#9" class="nav-item">MANAGEMENT</a><a href="#10" class="nav-item">MAIL SERVICE</a><a href="#11" class="nav-item">ONLINE RESERVATION</a></div>
+  </div>
+  <div class="barra desaparecer"></div>
+  <div class="items-fondo"><img src="img/fondo.png" class="img-fondo">
+    <div class="texto-fondo">My Seven Suite es un Software superior, Realice una mejor gestion de su Hotel o Resort</div>
+    <div class="boton-fondo">SOLICITA MAS INFORMACIÓN</div>
+  </div>
+  <div class="fondo"></div><br><br>
+  <div class="columns plr-3em">
+    <div class="is-3 column">
+      <h2 class="productos desaparecer">Nuestros Productos</h2>
+      <nav class="desaparecer">
+        <ul>
+          <li class="li current"><a data-id="0" href="#0" class="a">FRONT DESK</a></li>
+          <li class="li"><a data-id="1" href="#1" class="a">DECISIONES SUPPORT SYSTEM</a></li>
+          <li class="li"><a data-id="2" href="#2" class="a">COMUNICATION</a></li>
+          <li class="li"><a data-id="3" href="#3" class="a">ACCOUNTING</a></li>
+          <li class="li"><a data-id="4" href="#4" class="a">TOUR OPERATION</a></li>
+          <li class="li"><a data-id="5" href="#5" class="a">POINT OF SALES BILLING</a></li>
+          <li class="li"><a data-id="6" href="#6" class="a">PAYROLL</a></li>
+          <li class="li"><a data-id="7" href="#7" class="a">MULTIPROPERTY</a></li>
+          <li class="li"><a data-id="8" href="#8" class="a">FIXED ASSET</a></li>
+          <li class="li"><a data-id="9" href="#9" class="a">MANAGEMENT</a></li>
+          <li class="li"><a data-id="10" href="#10" class="a">MAIL SERVICE</a></li>
+          <li class="li"><a data-id="11" href="#11" class="a">ONLINE RESERVATION</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="column is-9">
+      <div id="data-json2" class="owl-carousel carrusel">
+        <!--include productos.pug.jade-->
+      </div>
+    </div>
+  </div><img src="img/modulos.png" width="100%" class="desaparecer">
+  <div class="center">
+    <div class="mas">Mas de <strong>100</strong> Clientes Felices</div>
+  </div>
+  <ul class="casos-container">
+    <li class="casos active"><a href="#i0" class="active">Hoteles</a></li>
+    <li class="casos"><a href="#i1" class="active">Restaurantes</a></li>
+    <li class="casos"><a href="#i2" class="active">Tour Operadores</a></li>
+    <li class="casos"><a href="#i3" class="active">Comercios</a></li>
+    <li class="casos"><a href="#i4" class="active">Empresas</a></li>
+    <li class="casos"><a href="#i5" class="active">Instituciones Educativas</a></li>
+  </ul><br><br>
+  <div id="imgs" class="owl-carousel">
+    <!--each val,index in itemss
+    +items(val,index)
+            
+    -->
+  </div>
+  <div class="pre-contact columns plr-3em">
+    <div class="column">
+      <h2>No dudes en Contactarnos</h2>
+      <p>Front Desk, con sus más de 160 opciones entre operativas,configuración y reportes, es a nivel de hoteles el más importanteentre los módulos.  Una vez configurado el Front Parámetros, estemódulo nos permite de una forma muy eficiente controlar lasoperaciones diarias con reportes muy útiles y facilidad demanipulación de grandes cantidades de información. Front Desk contiene el modulo de Front Parámetro.</p>
+    </div>
+    <div class="column">
+      <div class="box-contact">
+        <form action="" method="post" class="form">
+          <input type="text" name="email" placeholder="email">
+          <input type="text" name="nombre" placeholder="nombre">
+          <textarea name="informacion">información</textarea>
+          <button type="submit" name="button" class="boton">CONTACTENOS</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="columns plr-3em">
+    <div class="column">
+      <div class="post-contact"><img src="img/logo-seven.png" class="img-post-contact">
+        <div class="post-contact-title">
+          <p><strong>Dirección:</strong> 50 norte de la Iglesia Católica de Tibás, contiguo al Banco Popular.</p>
+          <p><strong>Telefono:</strong> (506) 2240-6585.</p>
+          <p><strong>Email:</strong> info@mysevensuite.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+  <div class="footer">
+    <div class="in-footer"><img src="img/logo-blanco.png"> mysevensuite.com</div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/data2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script src="js/index.js"></script>

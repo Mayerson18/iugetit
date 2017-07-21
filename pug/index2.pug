@@ -1,0 +1,112 @@
+//output:../index2.html
+-var p1 = "Front Desk, con sus más de 160 opciones entre operativas,configuración y reportes, es a nivel de hoteles el más importanteentre los módulos.  Una vez configurado el Front Parámetros, estemódulo nos permite de una forma muy eficiente controlar lasoperaciones diarias con reportes muy útiles y facilidad demanipulación de grandes cantidades de información. Front Desk contiene el modulo de Front Parámetro."
+-var lis = ["FRONT DESK","DECISIONES SUPPORT SYSTEM","COMUNICATION","ACCOUNTING","TOUR OPERATION","POINT OF SALES BILLING","PAYROLL","MULTIPROPERTY","FIXED ASSET","MANAGEMENT","MAIL SERVICE","ONLINE RESERVATION"]
+-var casos = ["Hoteles","Restaurantes","Tour Operadores","Comercios","Empresas","Instituciones Educativas"]
+-var hotel1 = {img:"img/casos/hoteles/agualcas.jpg",url:"agualcas.com",img2:"img/flag-cr.png"}
+-var hotel2 = {img:"img/casos/hoteles/cano-negro.png",url:"agualcas.com",img2:"img/flag-cr.png"}
+-var hotel3 = {img:"img/casos/hoteles/casa-roland-marina-golfito.png",url:"agualcas.com",img2:"img/flag-cr.png"}
+-var hotel4 = {img:"img/casos/hoteles/elgranescape.png",url:"El gran escape",img2:"img/flag-cr.png"}
+-var hotel5 = {img:"img/casos/hoteles/finca-luna-nueva-lodge.png",url:"agualcas.com",img2:"img/flag-cr.png"}
+-var hotel6 = {img:"img/casos/hoteles/las-colinas.png",url:"las-colinas",img2:"img/flag-cr.png"}
+-var hoteles1 = [hotel1,hotel2,hotel3]
+-var hoteles2 = [hotel4,hotel5,hotel6]
+-var item = {item1: hoteles1,item2: hoteles2}
+-var itemss = [item,item]
+
+mixin items(item,index)
+  .item(data-hash="#{'i'+index}")
+    .columns
+      +casos(item.item1)
+    .columns
+      +casos(item.item2)
+
+mixin casos(vak)
+  each val,index in vak
+    .column.casos-item
+      .flex-center
+        img.img-item(src="#{val.img}")
+      .flex-center
+        p #{val.url}
+      .flex-center
+        img.img-cr(src="#{val.img2}")
+          
+mixin lis(id,text)
+  if id==0
+    li.li.current
+      a.a(data-id="#{id}", href="#{'#'+ id}") #{text}
+  else
+    li.li
+      a.a(data-id="#{id}", href="#{'#'+ id}") #{text}
+include header.pug.jade
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
+    link(rel="stylesheet" href="OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css")
+body
+  .nav.aparecer
+    
+    .nav-toggle
+      span
+      span
+      span
+    
+    div.nav-item.nav-pro PRODUCTOS    
+    
+    .nav-right.nav-menu
+      a.nav-item(href="#0")="FRONT DESK"
+      a.nav-item(href="#1")="DECISIONES SUPPORT SYSTEM"
+      a.nav-item(href="#2")="COMUNICATION"
+      a.nav-item(href="#3")="ACCOUNTING"
+      a.nav-item(href="#4")="TOUR OPERATION"
+      a.nav-item(href="#5")="POINT OF SALES BILLING"
+      a.nav-item(href="#6")="PAYROLL"
+      a.nav-item(href="#7")="MULTIPROPERTY"
+      a.nav-item(href="#8")="FIXED ASSET"
+      a.nav-item(href="#9")="MANAGEMENT"
+      a.nav-item(href="#10")="MAIL SERVICE"
+      a.nav-item(href="#11")="ONLINE RESERVATION"
+        
+  .barra.desaparecer
+  .items-fondo
+    img.img-fondo(src="img/fondo.png")
+    .texto-fondo My Seven Suite es un Software superior, Realice una mejor gestion de su Hotel o Resort
+    .boton-fondo SOLICITA MAS INFORMACIÓN
+    
+  .fondo
+  br
+  br
+  .columns.plr-3em
+    .is-3.column
+      h2.productos.desaparecer Nuestros Productos
+      nav.desaparecer
+        ul
+          each val, index in lis
+            +lis(index,val)
+    .column.is-9
+      .owl-carousel#data-json2.carrusel
+        //include productos.pug.jade
+
+  img.desaparecer(src="img/modulos.png" width="100%")
+  .center
+    .mas Mas de #[strong 100] Clientes Felices
+    
+  ul.casos-container
+    each val,index in casos
+      if index == 0
+        li.casos.active
+          a.active(href="#{'#i'+index}") #{val}
+      else
+        li.casos
+          a.active(href="#{'#i'+index}") #{val}
+          
+  br
+  br
+  .owl-carousel#imgs
+    //each val,index in itemss
+      +items(val,index)
+              
+  include contactenos.pug.jade
+  include footer.pug.jade
+  
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="js/data2.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+script(src="js/index.js")
