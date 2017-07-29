@@ -1,0 +1,94 @@
+//output:../index3.html
+-var url = "img/jose.jpg"
+-var nombre = "Jose Medina"
+-var d1 = "Vivo en rio, mi cuarto de baño principal dejo de Funcionar ingrese al sitio y el sitio mostro los 3 plomeros cerca de mi lugar"
+-var cargo = "Plomero"
+-var d2 = "Destapa Posetas, Destapa cañeria, Plomeria baño , Plomeria Cocina"
+-var avatar = {"url":url,"nombre":nombre,"d1":d1,"d2":d2,"cargo":cargo}
+-var avatars = [avatar,avatar,avatar]
+    
+include header.pug.jade
+    link(rel="stylesheet" href="sass/index2.min.css")
+      
+mixin Lis(texto)
+  li
+    a.a-aside-left=texto
+    
+mixin Imgs(url)
+  .column
+    img.img-v3(src="#{url}" alt="")
+     
+mixin Cards(urlx,nombrex,d1x,cargox,d2x)
+    .column
+      .card
+        .card-content
+          img.avatar-img(src="#{urlx}" alt="")
+          h1.avatar-name #{nombrex}
+          p.avatar-description #{d1x}
+          .avatar-dir
+            h2.avatar-cargo #{cargox}  
+            span.avatar-stars
+                i.fa.fa-star(aria-hidden="true")
+                i.fa.fa-star(aria-hidden="true")
+                i.fa.fa-star(aria-hidden="true")
+                i.fa.fa-star(aria-hidden="true")
+                i.fa.fa-star(aria-hidden="true")
+          p.avatar-description2 #{d2x}
+          .avatar-time.flex
+            .avatar-num 5
+            .avatar-time-content Tiempo Promedio de Respuesta
+          .avatar-dir
+            .avatar-left 5 Comentarios
+            .avatar-right 5 Trabajos Completos
+  
+    
+body
+  include nav.pug.jade
+  .columns.pad2
+    .column.is-3
+      aside.left-bar
+        ul
+          each val in ["Mi Perfil","Mis Cotizaciones","Mensajes"]
+            +Lis(val)
+        .attention
+          h3.attention-title Atención al Cliente
+          p.attention-subtitle +584123356742
+        .box-unknown
+    .column.is-9
+      main        
+          h1.h1-main.center ¿Que Necesitas hacer?
+          input.input.input-main.mb50(type="text" placeholder="Cambiar un Bombillo")
+          .columns.is-fluid
+            .column
+              .info-adicional
+                label.label-info Información Adicional
+                input.input.input-main
+            .column
+              p.p-info Vivo en rio, mi cuarto de baño principal dejo de Funcionar ingrese al sitio y el sitio mostro los 3 plomeros cerca de mi lugar Vivo en rio, mi cuarto de baño principal dejo de 
+          .center.flex.flex-center
+            .add +
+          .columns.is-fluid
+            each val in ["img/retrete1.jpg","img/retrete2.jpg"]
+              +Imgs(val)
+          h2.title2 Preguntas Adicionales
+          .container-response.center
+            h3.t-left Pregunta de tipo Numero 1
+            .botones
+              .button.boton Respuesta 1
+              .button.boton Respuesta 2
+            h3.t-left Pregunta de tipo Numero 2
+            input.input.input-main.mb50(type="text" placeholder="Respuesta 1")
+              
+            .cont-professional
+              .num 3
+              .professional Pintores
+              .location estan cerca de tu ubicación
+            .columns
+              each val,index in avatars
+                +Cards(val.url,val.nombre,val.d1,val.cargo,val.d2)
+          .contactar CONTACTAR
+                
+           
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="js/index.js")
+script(src="https://use.fontawesome.com/baac1788c9.js")

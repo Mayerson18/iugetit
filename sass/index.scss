@@ -1,8 +1,8 @@
-@import "var";
-@import "mixins";
-@import "media";
-@import "v1";
-@import "v2";
+@import "index/var";
+@import "./index/mixins.scss";
+@import "./index/media.scss";
+@import "./index/v1.scss";
+@import "./index/v2.scss";
 
 body {
   font: 100% $font-stack;
@@ -21,6 +21,8 @@ a{/*Custom a*/
   text-decoration: none;
   color: $blanco;
 }
+
+.center{ text-align: center; }
 
 .li{ margin-top: 1em; }
 
@@ -144,8 +146,8 @@ figure{
 
 .azul{ color: $azul; }
 
-@import "cards";
-@import "footer";
+@import "index/cards";
+@import "index/footer";
 
 /*
 .prueba{
