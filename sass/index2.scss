@@ -10,9 +10,7 @@ $amarillo: #ff9f00;
 $blanco: #ffffff;
 $azul: #0099c2;
 
-body{
-  font-family:'Avenir LT Std 35 Light';
-}
+body{ font-family:'Avenir LT Std 35 Light'; }
 
 a{
   text-decoration: none;
@@ -47,13 +45,9 @@ aside{
   padding: .5em 0px;
 }
 
-.attention-subtitle{
-  color: $amarillo;
-}
+.attention-subtitle{ color: $amarillo; }
 
-.attention-title{
-  color: $blanco;
-}
+.attention-title{ color: $blanco; }
 
 .box-unknown{
   background-color: #e9e9e9;
@@ -105,13 +99,9 @@ aside{
   text-align: left;
   font-size: 1.5em;
 }
-.container-response{
-  padding: 0px 1em;
-}
+.container-response{ padding: 0px 1em; }
 
-.title2{
-  font-size: 2em;
-}
+.title2{ font-size: 2em; }
 
 .botones{
   @extend .flex;
@@ -160,9 +150,7 @@ aside{
  text-align: left;
 }
 
-.avatar-time{
-  justify-content: space-between;
-}
+.avatar-time{ justify-content: space-between; }
 
 .avatar-num{
   background-color: $amarillo;
@@ -187,20 +175,60 @@ aside{
   justify-content: space-between;
 }
 
-.avatar-left{
-@extend .avatar-description2;
-}
+.avatar-left{ @extend .avatar-description2; }
 
-.avatar-right{
-@extend .avatar-description2;
-}
+.avatar-right{ @extend .avatar-description2; }
 
 .contactar{
   background-color: #1689bd;
-  height: 10vh;
+  height: 15vh;
   font-size: 2.5em;
   color: $blanco;
   margin-top: 1em;
   @extend .flex;
   @extend .flex-center;
 }
+
+.panel{
+  background-color: $azul;
+  color: $blanco;
+}
+
+.box-gray{
+  height: 200px;
+  background-color: #ccc;
+}
+
+.blue{
+  @extend .panel;
+  border-color: $blanco;
+}
+
+.blue::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    $blanco;
+}
+.blue:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    $blanco;
+   opacity:  1;
+}
+.blue::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    $blanco;
+   opacity:  1;
+}
+.blue:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    $blanco;
+}
+.blue::-ms-input-placeholder { /* Microsoft Edge */
+   color:    $blanco;
+}
+
+.label-info{
+  font-size: 1.9em;
+  font-weight: bold;
+}
+
+.mb12{ margin-bottom: 12px!important; }
+
+.pt0{ padding-top: 0px;}
+
+.busqueda{ font-size: 2em;}

@@ -1,0 +1,30 @@
+mixin Cards(urlx,nombrex,d1x,cargox,d2x)
+  .column
+    .card
+      .card-content
+        img.avatar-img(src="#{urlx}" alt="")
+        h1.avatar-name #{nombrex}
+        p.avatar-description #{d1x}
+        .avatar-dir
+          h2.avatar-cargo #{cargox}  
+          span.avatar-stars
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+        p.avatar-description2 #{d2x}
+        .avatar-time.flex
+          .avatar-num 5
+          .avatar-time-content Tiempo Promedio de Respuesta
+        .avatar-dir
+          .avatar-left 5 Comentarios
+          .avatar-right 5 Trabajos Completos
+
+-var url = "img/jose.jpg"
+-var nombre = "Jose Medina"
+-var d1 = "Vivo en rio, mi cuarto de baño principal dejo de Funcionar ingrese al sitio y el sitio mostro los 3 plomeros cerca de mi lugar"
+-var cargo = "Plomero"
+-var d2 = "Destapa Posetas, Destapa cañeria, Plomeria baño , Plomeria Cocina"
+-var avatar = {"url":url,"nombre":nombre,"d1":d1,"d2":d2,"cargo":cargo}
+-var avatars = [avatar,avatar,avatar]

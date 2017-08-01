@@ -17,30 +17,6 @@ mixin Lis(texto)
 mixin Imgs(url)
   .column
     img.img-v3(src="#{url}" alt="")
-     
-mixin Cards(urlx,nombrex,d1x,cargox,d2x)
-    .column
-      .card
-        .card-content
-          img.avatar-img(src="#{urlx}" alt="")
-          h1.avatar-name #{nombrex}
-          p.avatar-description #{d1x}
-          .avatar-dir
-            h2.avatar-cargo #{cargox}  
-            span.avatar-stars
-                i.fa.fa-star(aria-hidden="true")
-                i.fa.fa-star(aria-hidden="true")
-                i.fa.fa-star(aria-hidden="true")
-                i.fa.fa-star(aria-hidden="true")
-                i.fa.fa-star(aria-hidden="true")
-          p.avatar-description2 #{d2x}
-          .avatar-time.flex
-            .avatar-num 5
-            .avatar-time-content Tiempo Promedio de Respuesta
-          .avatar-dir
-            .avatar-left 5 Comentarios
-            .avatar-right 5 Trabajos Completos
-  
     
 body
   include nav.pug.jade
@@ -84,6 +60,7 @@ body
               .professional Pintores
               .location estan cerca de tu ubicación
             .columns
+              include carta.pug.jade
               each val,index in avatars
                 +Cards(val.url,val.nombre,val.d1,val.cargo,val.d2)
           .contactar CONTACTAR
