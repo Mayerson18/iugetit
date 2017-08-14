@@ -1,0 +1,10 @@
+mixin Calificaciones(title,subtitle,hours)
+  .avatar-v6.calificaciones
+    .avatar-img-v6
+      img(src="img/jose.jpg")
+    .avatar-body-v6
+      .flex
+        .avatar-name-v6.ti #{title}
+        +Stars("","")
+      .subti #{subtitle}
+      .hours #{hours}

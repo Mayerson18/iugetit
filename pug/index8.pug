@@ -13,9 +13,9 @@ mixin Imgs(url)
   .column
     img.img-v3(src="#{url}" alt="")
       
-mixin Stars(text)
+mixin Stars(text,className)
   .evaluar #{text}
-    span.avatar-stars.opacity
+    span.avatar-stars(class="#{className}")
         i.fa.fa-star(aria-hidden="true")
         i.fa.fa-star(aria-hidden="true")
         i.fa.fa-star(aria-hidden="true")
@@ -24,6 +24,8 @@ mixin Stars(text)
       
 include carta.pug.jade
 include carta2.pug.jade
+include calificaciones.pug.jade
+include contrataciones.pug.jade
      
 body
   include nav.pug.jade
@@ -43,11 +45,11 @@ body
           .ref.right Editar
           br
           .evaluars
-            +Stars("Evaluar1")
-            +Stars("Evaluar2")
+            +Stars("Evaluar1","opacity")
+            +Stars("Evaluar2","opacity")
           .evaluars
-            +Stars("Evaluar3")
-            +Stars("Evaluar4")
+            +Stars("Evaluar3","opacity")
+            +Stars("Evaluar4","opacity")
             
       .columns.is-fluid.skills
         .column
@@ -62,8 +64,36 @@ body
           .skill skill5
         .column
           .skill skill6
-        .ref.right Editar
+        .ref.right.flex-end Editar
+      
+      .flex
+        .title-service-v6 Mis Trabajos
+        .center.flex.flex-center
+          .add.add2.gris +
+          
+      .columns.is-fluid
+        .column
+          .box-unknown(style="height:30vh")
+        .column
+          .box-unknown(style="height:30vh")
+        .column
+          .box-unknown(style="height:30vh")
+        .column
+          .box-unknown(style="height:30vh")
             
+      .columns.is-fluid
+        .column
+          .title-service-v6 Ultimas Calificaciones
+          +Calificaciones("Roselili","Outstanding experience!","about 20 hours ago")
+          +Calificaciones("Savyaguduru","On time delivery and very fast in revision","today")
+          +Calificaciones("sckjsis","Excellent work and excellent customer service!","2 days ago")
+          +Calificaciones("Cgaines7","Fantastic work, Nailed it. Look forward to working.","2 days ago")
+        .column
+          .title-service-v6 Ultimas Contrataciones
+          +Contrataciones("Roselili","Servicio de plomeria de baños","about 20 hours ago")
+          +Contrataciones("Savyaguduru","Servicio de plomeria de baños","today")
+          +Contrataciones("sckjsis","Servicio de plomeria de baños","2 days ago")
+          +Contrataciones("Cgaines7","Servicio de plomeria de baños","2 days ago")
            
 script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 script(src="https://use.fontawesome.com/baac1788c9.js")

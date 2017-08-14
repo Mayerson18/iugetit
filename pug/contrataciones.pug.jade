@@ -1,0 +1,13 @@
+mixin Contrataciones(title,subtitle,hours)
+  .avatar-v6.contrataciones
+    .flex
+      .avatar-img-v6
+        img(src="img/jose.jpg")
+      .avatar-body-v6
+        .avatar-name-v6.ti #{title}
+        .hours #{hours}
+    .space-between
+      .flex
+        .subti #{subtitle}
+        +Stars("","")
+      .dolars2 $22
