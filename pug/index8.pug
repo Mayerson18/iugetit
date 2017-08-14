@@ -1,0 +1,70 @@
+//output:../public/index8.html
+include header.pug.jade
+    link(rel="stylesheet" href="css/index2.min.css")
+      
+//0 texto,1 numero,2 estado del numero(si lleva o no lleva numero)
+mixin Lis(texto,num,state)
+  li.space-between
+    a.a-aside-left.f1em=texto
+    if state
+      .avatar-num.blue.num-v5 #{num}
+    
+mixin Imgs(url)
+  .column
+    img.img-v3(src="#{url}" alt="")
+      
+mixin Stars(text)
+  .evaluar #{text}
+    span.avatar-stars.opacity
+        i.fa.fa-star(aria-hidden="true")
+        i.fa.fa-star(aria-hidden="true")
+        i.fa.fa-star(aria-hidden="true")
+        i.fa.fa-star(aria-hidden="true")
+        i.fa.fa-star(aria-hidden="true")
+      
+include carta.pug.jade
+include carta2.pug.jade
+     
+body
+  include nav.pug.jade
+  .columns.pad2
+    .column.is-3
+      aside.left-bar
+        ul
+          each val in [{text:"Hola ",num:"0",stateNumero:false},{text:"Nuevos Trabajos",num:"0",stateNumero:true},{text:"Trabajos Aceptados",num:"0",stateNumero:false}]
+            +Lis(val.text,val.num,val.stateNumero)
+    
+    .column.is-9.center
+      .columns.is-fluid
+        .column.is-4
+          +Cards2(avatars[0].url,avatars[0].nombre,avatars[0].cargo)
+        .column.is-8
+          p.description-v8 #{avatars[0].d1}#{avatars[0].d1}
+          .ref.right Editar
+          br
+          .evaluars
+            +Stars("Evaluar1")
+            +Stars("Evaluar2")
+          .evaluars
+            +Stars("Evaluar3")
+            +Stars("Evaluar4")
+            
+      .columns.is-fluid.skills
+        .column
+          .skill skill1
+        .column
+          .skill skill2
+        .column
+          .skill skill3
+        .column
+          .skill skill4
+        .column
+          .skill skill5
+        .column
+          .skill skill6
+        .ref.right Editar
+            
+           
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="https://use.fontawesome.com/baac1788c9.js")
+script(src="js/index.js")

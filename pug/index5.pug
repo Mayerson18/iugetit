@@ -1,0 +1,61 @@
+//output:../public/index5.html
+include header.pug.jade
+    link(rel="stylesheet" href="css/index2.min.css")
+      
+//0 texto,1 numero,2 estado del numero(si lleva o no lleva numero)
+mixin Lis(texto,num,state)
+  li.space-between
+    a.a-aside-left=texto
+    if state
+      .avatar-num.blue.num-v5 #{num}
+    
+mixin Imgs(url)
+  .column
+    img.img-v3(src="#{url}" alt="")
+      
+include carta.pug.jade
+     
+body
+  include nav.pug.jade
+  .columns.pad2
+    .column.is-4
+      h1.h1-main.center.h1-v5 ¿Que Necesitas hacer?
+    .column.is-5
+      input.input.input-main.mb50(type="text" placeholder="Cambiar un Bombillo")
+    .column.is-3
+      .blue.buscar Buscar
+      
+  .columns.pad2      
+    .column.is-3
+      aside.left-bar
+        ul
+          each val in [{text:"Mi perfil",num:"0",stateNumero:false},{text:"Mensajes",num:"0",stateNumero:true},{text:"Mensajes",num:"0",stateNumero:true}]
+            +Lis(val.text,val.num,val.stateNumero)
+    .column.is-9.center
+      h2.contactar-v5.mb50 CONTACTAR
+      h2.h1-main.center ¿Que Necesitas hacer?
+      input.input.input-main.mb50(type="text" placeholder="Cambiar un Bombillo")
+      .columns.is-fluid
+        .column.is-7
+          .info-adicional
+            label.label-info Información Adicional
+            input.input.input-main
+        .column.is-5
+          p Vivo en rio, mi cuarto de baño principal dejo de Funcionar ingrese al sitio y el sitio mostro los 3 plomeros cerca de mi lugar Vivo en rio, mi cuarto de baño principal dejo de 
+      .center.flex.flex-center
+        .add.gris +
+      .columns.is-fluid
+        .column
+          .box-unknown.gris(style="height:40vh;")
+        .column
+          .box-unknown.gris(style="height:40vh;")
+        .column
+          .box-unknown.gris(style="height:40vh;")
+      .columns.is-fluid
+        each val,index in avatars
+          +Cards(val.url,val.nombre,val.d1,val.cargo,val.d2)
+      .contactar CONTACTAR
+                
+           
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="https://use.fontawesome.com/baac1788c9.js")

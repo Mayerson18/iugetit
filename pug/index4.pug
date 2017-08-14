@@ -1,7 +1,6 @@
-//output:../index4.html
-    
+//output:../public/index4.html
 include header.pug.jade
-    link(rel="stylesheet" href="sass/index2.min.css")
+    link(rel="stylesheet" href="css/index2.min.css")
       
 mixin Lis(texto)
   li
@@ -45,22 +44,13 @@ body
       img.logo(src="img/brand.png" alt="Iugetit")
 
   .columns.pad2
-    .column.is-3
-      aside.left-bar
-        ul
-          each val in ["Mi Perfil","Mis Cotizaciones","Mensajes"]
-            +Lis(val)
-        .attention
-          h3.attention-title Atención al Cliente
-          p.attention-subtitle +584123356742
-        .box-unknown
+    include asideLeft.pug.jade
+    //aside left is-3
     .column.is-9
       .columns.is-fluid.center
-        //Carta.pug.jade
         each val,index in avatars
           +Cards(val.url,val.nombre,val.d1,val.cargo,val.d2)
       .columns.is-fluid.center
-        //Carta.pug.jade
         each val,index in avatars
           +Cards(val.url,val.nombre,val.d1,val.cargo,val.d2)
                 

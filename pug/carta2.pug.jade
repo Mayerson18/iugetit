@@ -1,0 +1,18 @@
+mixin Cards2(urlx,nombrex,cargox)
+  .column
+    .card
+      .card-content
+        img.avatar-img(src="#{urlx}" alt="")
+        h1.avatar-name #{nombrex}
+        .ref.right Editar
+        .avatar-dir
+          h2.avatar-cargo #{cargox}  
+          span.avatar-stars
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+              i.fa.fa-star(aria-hidden="true")
+        .avatar-time.flex
+          .avatar-num 5
+          .avatar-time-content Tiempo Promedio de Respuesta

@@ -9,6 +9,7 @@ $negro: #313131;
 $amarillo: #ff9f00;
 $blanco: #ffffff;
 $azul: #0099c2;
+$gris: #d8d8d8;
 
 body{ font-family:'Avenir LT Std 35 Light'; }
 
@@ -232,3 +233,175 @@ aside{
 .pt0{ padding-top: 0px;}
 
 .busqueda{ font-size: 2em;}
+
+/* VISTA 5 /*****************/
+
+.buscar{
+  width: 100%;
+  font-size: 1.5em;
+  border-radius: 15px;
+  padding: .5em 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.space-between{
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.num-v5{
+  border-radius: 10px;
+  align-items: initial;
+}
+
+.contactar-v5{
+  color: $azul;
+  font-size: (40px);
+  font-weight: bold;
+}
+
+.gris{
+  background-color: $gris;
+}
+
+.h1-v5{
+  font-size: 2.1em;
+}
+
+/********* VISTA 6 ***********/
+
+.f1em{
+  font-size: 1em;
+}
+.avatar-v6{
+  @extend .flex;
+}
+
+.avatar-img-v6{
+  border-radius: 31px;
+  width: 68px;
+  height: 68px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  &>img{
+    border-radius: 31px;
+  }
+}
+.avatar-body-v6{
+  padding-left: 1em;
+  &>.avatar-name-v6{ font-size: 2em; }
+  &>.avatar-stars-v6{ text-align: left; }
+}
+
+.zona-v6{
+  padding-top: .3em;
+  border-radius: 20px;
+  border: solid 1px #979797;
+  height: 86px;
+  & >.esquina-zona-v6{
+    position: relative;
+    top: 26%;
+    text-align: right;
+    padding-right: 1em;
+  }
+}
+
+.title-service-v6{
+  text-align: left;
+  color: #212121;
+  font-size: 2em;
+}
+
+.publicado-v6{ color: $azul; }
+
+.horas-v6{ font-size: .8em;}
+
+.table td, .table th {
+  border: 0px;
+}
+
+.activo{
+  background-color: $azul;
+}
+
+.td-short{
+  width: 18%!important;
+}
+
+td{
+  background-color: $gris;
+  border-right: 10px solid white!important;
+  border-bottom: 10px solid white!important;
+}
+
+.subrayado{
+  border-bottom: 1px solid #979797;
+  margin-bottom: 10px;
+}
+
+.dolars{
+  font-size: 3em;
+  color: $amarillo;
+}
+
+.tiempo-estimado{
+  font-size: 1.8em;
+}
+
+.precio{
+  color: #212121;
+  font-size: 1.5em;
+}
+
+.flex-end{
+  @extend .flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.dolars2{
+  font-size: 1.8em;
+  color: $amarillo;
+}
+
+.ref{
+  color: $azul;
+}
+
+.precio-ref{
+  font-size: 1.15em;
+  opacity: .5;
+}
+
+.texto-indicativo{
+  font-size: 2em;
+  color: #313131;
+  text-align: left;
+}
+
+.new-material{ margin-bottom: 2em;}
+
+.right{ text-align: right; }
+/********* FIN VISTA 6 ***********/
+
+/********* VISTA 7 ***********/
+.separador{
+  border: solid 1px #979797;
+  margin-bottom: 1em;
+}
+/********* FIN VISTA 7 ***********/
+
+/********* VISTA 8 ***********/
+.evaluars{
+  @extend .flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.opacity{
+  opacity: .5;
+}
+.skill{
+  background-color: $gris;
+  padding: .5em;
+}
+/********* FIN VISTA 8 ***********/

@@ -1,0 +1,76 @@
+//output:../public/index6.html
+-var textoIndicativo = "Algunos trabajos requieren materiales adicionales tambien puedes cotizarlos al cliente"
+
+include header.pug.jade
+    link(rel="stylesheet" href="css/index2.min.css")
+      
+//0 texto,1 numero,2 estado del numero(si lleva o no lleva numero)
+mixin Lis(texto,num,state)
+  li.space-between
+    a.a-aside-left.f1em=texto
+    if state
+      .avatar-num.blue.num-v5 #{num}
+    
+mixin Imgs(url)
+  .column
+    img.img-v3(src="#{url}" alt="")
+      
+include carta.pug.jade
+     
+body
+  include nav.pug.jade
+  .columns.pad2
+    .column.is-4
+      h1.h1-main.center.h1-v5 ¿Que Necesitas hacer?
+    .column.is-5
+      input.input.input-main.mb50(type="text" placeholder="Cambiar un Bombillo")
+    .column.is-3
+      .blue.buscar Buscar
+      
+  .columns.pad2
+    .column.is-3
+      aside.left-bar
+        ul
+          each val in [{text:"Hola ",num:"0",stateNumero:false},{text:"Nuevos Trabajos",num:"0",stateNumero:true},{text:"Trabajos Aceptados",num:"0",stateNumero:false}]
+            +Lis(val.text,val.num,val.stateNumero)
+    
+    .column.is-9.center
+      h2.contactar-v5.mb50 COTIZAR
+      include avatar.pug.jade
+                
+      include table.pug.jade
+      .columns.is-fluid
+        .column.is-6
+          .columns.is-fluid
+            .column.is-6
+              .subrayado.dolars $22
+              .precio Precio del Servicio
+            .column.is-6.flex-end
+              .subrayado.tiempo-estimado 4 Horas
+              .precio Tiempo Estimado
+        .column.is-6.flex-end
+          .dolars2 $22
+          .precio-ref Precio Referencial del Servicio
+          .ref Ver Referencias
+
+      .texto-indicativo #{textoIndicativo}
+      .new-material.ref.right Cotizar Nuevo Material
+      .columns.is-fluid
+        .column.is-6
+          input.input.input-main.mb50#material(type="text" placeholder="Material")
+        .column.is-6
+          .columns.is-fluid
+            .column.is-4
+              input.input.input-main.mb50#cantidad(type="text" placeholder="Cantidad")
+            .column.is-4
+              input.input.input-main.mb50#precio(type="text" placeholder="Precio")
+            .column.is-4
+              input.input.input-main.mb50#total(type="text" placeholder="Total")
+      
+      
+      input.input.input-main.mb50#info(type="text" placeholder="Escribe aqui, informacion de por que el cliente debe comprar este material ")
+    
+           
+script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+script(src="https://use.fontawesome.com/baac1788c9.js")
+script(src="js/index.js")
