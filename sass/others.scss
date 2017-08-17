@@ -1,0 +1,58 @@
+@import "index/var";
+@import "./index/mixins.scss";
+@import "./index/utilidades.scss";
+
+.info{
+  background-color: #0099c2;
+}
+
+.p-profesionales{
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.full-w{ width: 100%; }
+
+.pad0{ padding:0px; }
+
+.azul{ color: $azul; }
+
+
+iframe{
+  width: 100%;
+}
+
+.h1-find {
+  color: $naranja;
+  font-size: 3.4em;
+}
+
+.h3-find {
+  font-size: 1.5em;
+}
+
+.p-find {
+  font-size: 1em;
+}
+
+.centrado{
+  @extend .flex-center;
+  flex-direction: column;
+}
+
+.container-pasos{
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0px;
+  & > .p-pasos{
+    width: 85%
+  }
+}
+
+
+@media(max-width:768px){
+  .boton{ font-size: .8em;}
+  .nav-item{ color: black!important;}
+  .box-contact{ position: static;}
+  .h1-contact{ font-size: 2em;}
+}
