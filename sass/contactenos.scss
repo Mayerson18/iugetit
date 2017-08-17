@@ -1,0 +1,24 @@
+@import "index/var";
+@import "./index/mixins.scss";
+@import "./index/utilidades.scss";
+
+.back{
+  background: -webkit-linear-gradient(top, #fff 0%, #f6f6f6 47%, #ededed 100%);
+}
+.box-contact{
+  width: 94%;
+  position: absolute;
+  border: 4px solid $azul;
+  border-radius: 25px;
+  background-color: $blanco;
+  padding: 2em 1em;
+}
+
+.btn-contact{
+  background-color: $azul;
+  color: $blanco;
+}
+
+.is-5{  position: relative; }
+
+.h1-contact{ font-size: em(63px);}

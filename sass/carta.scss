@@ -1,0 +1,61 @@
+@import "index/var";
+@import "./index/mixins.scss";
+@import "./index/utilidades.scss";
+$negro: #313131;
+$amarillo: #ff9f00;
+$blanco: #ffffff;
+$azul: #0099c2;
+$gris: #d8d8d8;
+
+.avatar-img{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.avatar-name{ font-size: 2em; }
+
+.avatar-description{ opacity: .8; }
+
+.avatar-cargo{
+  color: $azul;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.avatar-stars{ color: $amarillo; }
+
+.avatar-description2{
+ font-size: .6em;
+ opacity: .6;
+ text-align: left;
+}
+
+.avatar-time{ justify-content: space-between; }
+
+.avatar-num{
+  background-color: $amarillo;
+  font-size: 1em;
+  color: $blanco;
+  border-radius: 100px;
+  @extend .flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+}
+
+.avatar-time-content{
+  font-weight: bold;
+  padding: 5px 0px;
+  font-size: .9em;
+}
+
+.avatar-dir{
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.avatar-left{ @extend .avatar-description2; }
+
+.avatar-right{ @extend .avatar-description2; }

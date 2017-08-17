@@ -1,0 +1,54 @@
+@import "index/var";
+@import "./index/mixins.scss";
+@import "./index/utilidades.scss";
+$negro: #313131;
+$amarillo: #ff9f00;
+$blanco: #ffffff;
+$azul: #0099c2;
+$gris: #d8d8d8;
+
+
+.f1em{
+  font-size: 1em;
+}
+.avatar-v6{
+  @extend .flex;
+}
+
+.avatar-img-v6{
+  border-radius: 31px;
+  width: 68px;
+  height: 68px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  &>img{
+    border-radius: 31px;
+  }
+}
+.avatar-body-v6{
+  padding-left: 1em;
+  &>.avatar-name-v6{ font-size: 2em; }
+  &>.avatar-stars-v6{ text-align: left; }
+}
+
+.zona-v6{
+  padding-top: .3em;
+  border-radius: 20px;
+  border: solid 1px #979797;
+  height: 86px;
+  & >.esquina-zona-v6{
+    position: relative;
+    top: 26%;
+    text-align: right;
+    padding-right: 1em;
+  }
+}
+
+.title-service-v6{
+  text-align: left;
+  color: #212121;
+  font-size: 2em;
+}
+
+.publicado-v6{ color: $azul; }
+
+.horas-v6{ font-size: .8em;}

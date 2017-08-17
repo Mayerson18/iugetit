@@ -20,6 +20,12 @@ a{/*Custom a*/
 
 .li{ margin-top: 1em; }
 
+.flex{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
 .flex-end{
   display: flex;
   justify-content: flex-end;
